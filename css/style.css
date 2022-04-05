@@ -1,0 +1,176 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+background-color: #f1f1f1; 
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+ 
+
+}
+
+
+
+
+.container {
+width: 100%;
+height: 100%;
+
+position: fixed;
+}
+
+
+/*
+ class + element selector
+0,0,1,1
+*/
+div.main-section {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 100px;
+}
+
+
+
+/*
+class + element selector
+
+0,0,1,1
+
+*/
+div.main-section + article.child-one + form{
+width: 50%;
+height: 100%;
+float: left;
+  /* Stick to the top */
+  top: 0;
+position: relative;
+  color: yellow;
+
+margin:auto;
+padding: 100px;
+}
+
+
+
+/*
+class + element + child combinator selector
+*/
+article.child-one > h1, p{
+
+text-align: left;
+
+color: green;
+
+}
+
+
+article#phone-image {
+  margin: 0 auto;
+  margin-bottom: 140px;
+ 
+  margin-left: 730px;
+padding: 50px;
+  float: none;
+}
+
+
+.child-two {
+  margin-left: 100px;
+}
+
+
+.child-two, .child-three, .child-four, .child-five {
+position: relative;
+  height: 230px;
+  width: 231px;
+  float: left;
+  border: 3px solid black;
+  clear: right;
+ display: block;
+  margin-right: 100px;
+  padding-right: 110px;
+}
+
+h6 {
+  clear: left;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 20px;
+}
+
+ p {
+  text-align: left;
+  position: absolute;
+
+  margin: 10px;
+  padding-top: 20px;
+}
+
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+nav {
+  margin: 0;
+ 
+}
+
+
+nav.nav-main {
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px auto;
+}
+
+
+nav.nav-main > a:link{
+
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px auto;
+  color: red;
+position: relative;
+}
+
+nav.nav-main > button {
+  float: right;
+  margin-right: 10px;
+}
+
+
+p > a:link {
+  text-align: center;
+}
